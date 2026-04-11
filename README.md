@@ -47,3 +47,16 @@ Layla intends to deepen her understanding of machine learning and its applicatio
 Risk Statement
 One concern of ours is that while we think the idea is quite interesting, we might not be able to find the proper data sets we need. While there are many rpgs we can take inspiration from, there comes the issue of documentation for many of them. Additionally even if we do find some information, how can we get it into a data sheet? What will our criteria be, thresholds for certain stats, ect? How will we determine hybrid classes/stat distribution ect, it is a lot to think about despite the concept being quite simple. 
 
+Tentative Timeline
+Week 1:
+Determine ways of gathering our data set since that will be vital to our project, in addition decide which games we specifically wish to work on for example The Elder Scroll series and Soulslike games have very different leveling systems. It is likely that we will pick Oblivion in the Elder Scrolls series but we want to do more research first before fully investing into it.
+
+Week 2:
+We should have decided on the game and found a way to get the data for it. We should start on our algorithm, determine what our features and classes should look like as that will be important in determining which rpg class the person picked. In all likelihood our features will end up being the rpg class and our classes will be the stats.  We aim to have a working pipeline which includes an understanding of the relationship between the stat distribution and classes. Using perhaps logistic regression and what we’ve learned in class we would hope to have the math solved for the model. We want to be able to generate initial predictions even if it is low/below the baseline of 40-50%.
+
+Week 3:
+Our algorithm should be mostly built with it evaluating metrics such as our accuracy and at least close to but hopefully meeting our baseline. We should still try to refine it as much as we can, doing things such as ensuring the weights and potential biases are accessed properly. Potentially we wish to convert it into an application so it can be used. 
+
+Week 4:
+Add finishing touches, improve accuracy as much as we can. We expect to have a more refined original model, then compare with different models. Get all the deliverables in order and be able to think about how to present our findings to the class.
+
