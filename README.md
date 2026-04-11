@@ -37,3 +37,13 @@ https://www.elderstats.com/stats/db/oblivion
 We will also need a copy of the game Oblivion (which Edy does own) for any extra cases.
 
 We will likely use the gpu provided by google colab.
+
+What You Will Learn
+
+Edy intends to learn how to gather a data-set, and parse it into a spread sheet for us and the machine to read. In addition he wants to learn the best ways to think about features, classes and any other attributes as this project will include various different ways to weigh certain things. For example a warrior might value strength more than a mage but that doesn’t really take into account classes that are more hybrid. Generally he wishes to practice more with the tools that we have learnt in class and applying it in an application driven model. 
+
+Layla intends to deepen her understanding of machine learning and its applications. She intends to strengthen her skills on feature engineering and model selection as we’ve been taught a few in class already. As the project continues she also aims to gain practical experience working with programming tools such as Python based ML frameworks and data preprocessing. As well as improving her teamworking, project management, and communication skills. We aim to work collaboratively on a project that we are both passionate about and hope to help other gamers who may find the character building feature overwhelming at first.
+
+Risk Statement
+One concern of ours is that while we think the idea is quite interesting, we might not be able to find the proper data sets we need. While there are many rpgs we can take inspiration from, there comes the issue of documentation for many of them. Additionally even if we do find some information, how can we get it into a data sheet? What will our criteria be, thresholds for certain stats, ect? How will we determine hybrid classes/stat distribution ect, it is a lot to think about despite the concept being quite simple. 
+
