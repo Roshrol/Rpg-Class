@@ -1,0 +1,1442 @@
+[
+  {
+    "url": "https://www.elderstats.com/character/8",
+    "class": {
+      "className": "Thief"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 75,
+      "Willpower": 88,
+      "Agility": 100,
+      "Speed": 100,
+      "Endurance": 90,
+      "Personality": 90,
+      "Luck": 61
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/9",
+    "class": {
+      "className": "Acrobat"
+    },
+    "attributes": {
+      "Strength": 255,
+      "Intelligence": 255,
+      "Willpower": 255,
+      "Agility": 255,
+      "Speed": 255,
+      "Endurance": 255,
+      "Personality": 255,
+      "Luck": 255
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/11",
+    "class": {
+      "className": "Shadow"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 81,
+      "Willpower": 97,
+      "Agility": 100,
+      "Speed": 86,
+      "Endurance": 100,
+      "Personality": 39,
+      "Luck": 62
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/20",
+    "class": {
+      "className": "Shadowscale"
+    },
+    "attributes": {
+      "Strength": 47,
+      "Intelligence": 42,
+      "Willpower": 30,
+      "Agility": 63,
+      "Speed": 60,
+      "Endurance": 33,
+      "Personality": 33,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/21",
+    "class": {
+      "className": "Hero"
+    },
+    "attributes": {
+      "Strength": 75,
+      "Intelligence": 30,
+      "Willpower": 32,
+      "Agility": 47,
+      "Speed": 45,
+      "Endurance": 75,
+      "Personality": 30,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/22",
+    "class": {
+      "className": "Warrior"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 37,
+      "Willpower": 41,
+      "Agility": 51,
+      "Speed": 44,
+      "Endurance": 100,
+      "Personality": 34,
+      "Luck": 51
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/24",
+    "class": {
+      "className": "Battlemage"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/25",
+    "class": {
+      "className": "Brawler"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 40,
+      "Willpower": 30,
+      "Agility": 92,
+      "Speed": 100,
+      "Endurance": 100,
+      "Personality": 42,
+      "Luck": 70
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/26",
+    "class": {
+      "className": "Lord Warrior"
+    },
+    "attributes": {
+      "Strength": 89,
+      "Intelligence": 100,
+      "Willpower": 89,
+      "Agility": 84,
+      "Speed": 86,
+      "Endurance": 100,
+      "Personality": 30,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/27",
+    "class": {
+      "className": "Spartan"
+    },
+    "attributes": {
+      "Strength": 65,
+      "Intelligence": 30,
+      "Willpower": 32,
+      "Agility": 45,
+      "Speed": 42,
+      "Endurance": 65,
+      "Personality": 30,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/28",
+    "class": {
+      "className": "Warrior"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/31",
+    "class": {
+      "className": "Rogue"
+    },
+    "attributes": {
+      "Strength": 56,
+      "Intelligence": 40,
+      "Willpower": 40,
+      "Agility": 79,
+      "Speed": 73,
+      "Endurance": 53,
+      "Personality": 52,
+      "Luck": 60
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/32",
+    "class": {
+      "className": "Wanderer"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/33",
+    "class": {
+      "className": "Adventurer"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/34",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/36",
+    "class": {
+      "className": "Adventurer"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 49,
+      "Willpower": 30,
+      "Agility": 84,
+      "Speed": 100,
+      "Endurance": 94,
+      "Personality": 55,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/37",
+    "class": {
+      "className": "Thief"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/38",
+    "class": {
+      "className": "Battlemage"
+    },
+    "attributes": {
+      "Strength": 102,
+      "Intelligence": 102,
+      "Willpower": 100,
+      "Agility": 70,
+      "Speed": 90,
+      "Endurance": 58,
+      "Personality": 82,
+      "Luck": 51
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/39",
+    "class": {
+      "className": "Warrior"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 42,
+      "Willpower": 100,
+      "Agility": 63,
+      "Speed": 72,
+      "Endurance": 58,
+      "Personality": 72,
+      "Luck": 49
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/40",
+    "class": {
+      "className": "Assassin"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 100,
+      "Willpower": 100,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/42",
+    "class": {
+      "className": "Adventurer"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 47,
+      "Willpower": 35,
+      "Agility": 30,
+      "Speed": 40,
+      "Endurance": 100,
+      "Personality": 94,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/49",
+    "class": {
+      "className": "Monk"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/53",
+    "class": {
+      "className": "Custer Warrior"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 100,
+      "Willpower": 100,
+      "Agility": 100,
+      "Speed": 100,
+      "Endurance": 100,
+      "Personality": 60,
+      "Luck": 69
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/54",
+    "class": {
+      "className": "Bard"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/55",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 110,
+      "Willpower": 105,
+      "Agility": 100,
+      "Speed": 100,
+      "Endurance": 100,
+      "Personality": 81,
+      "Luck": 100
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/56",
+    "class": {
+      "className": "Mystic Knight"
+    },
+    "attributes": {
+      "Strength": 110,
+      "Intelligence": 101,
+      "Willpower": 78,
+      "Agility": 66,
+      "Speed": 63,
+      "Endurance": 64,
+      "Personality": 70,
+      "Luck": 51
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/59",
+    "class": {
+      "className": "Warrior"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/65",
+    "class": {
+      "className": "Dawnbringer"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/66",
+    "class": {
+      "className": "Thief"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/67",
+    "class": {
+      "className": "Moonwalker"
+    },
+    "attributes": {
+      "Strength": 79,
+      "Intelligence": 58,
+      "Willpower": 76,
+      "Agility": 100,
+      "Speed": 94,
+      "Endurance": 100,
+      "Personality": 65,
+      "Luck": 60
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/68",
+    "class": {
+      "className": "Squire"
+    },
+    "attributes": {
+      "Strength": 73,
+      "Intelligence": 42,
+      "Willpower": 59,
+      "Agility": 56,
+      "Speed": 53,
+      "Endurance": 74,
+      "Personality": 30,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/69",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 56,
+      "Intelligence": 100,
+      "Willpower": 95,
+      "Agility": 45,
+      "Speed": 64,
+      "Endurance": 55,
+      "Personality": 63,
+      "Luck": 51
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/70",
+    "class": {
+      "className": "Thief"
+    },
+    "attributes": {
+      "Strength": 57,
+      "Intelligence": 50,
+      "Willpower": 53,
+      "Agility": 87,
+      "Speed": 64,
+      "Endurance": 60,
+      "Personality": 70,
+      "Luck": 60
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/71",
+    "class": {
+      "className": "Morag Tong"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/72",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/73",
+    "class": {
+      "className": "Healer"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/74",
+    "class": {
+      "className": "Assassin"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/75",
+    "class": {
+      "className": "Dark Knight"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/76",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 40,
+      "Intelligence": 100,
+      "Willpower": 40,
+      "Agility": 40,
+      "Speed": 100,
+      "Endurance": 97,
+      "Personality": 74,
+      "Luck": 93
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/78",
+    "class": {
+      "className": "Acrobat"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/80",
+    "class": {
+      "className": "Wanderer"
+    },
+    "attributes": {
+      "Strength": 81,
+      "Intelligence": 46,
+      "Willpower": 57,
+      "Agility": 76,
+      "Speed": 74,
+      "Endurance": 81,
+      "Personality": 53,
+      "Luck": 98
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/81",
+    "class": {
+      "className": "Assassin"
+    },
+    "attributes": {
+      "Strength": 63,
+      "Intelligence": 55,
+      "Willpower": 52,
+      "Agility": 82,
+      "Speed": 82,
+      "Endurance": 79,
+      "Personality": 58,
+      "Luck": 81
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/83",
+    "class": {
+      "className": "Assassin"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/84",
+    "class": {
+      "className": "Custer"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 100,
+      "Willpower": 100,
+      "Agility": 74,
+      "Speed": 100,
+      "Endurance": 100,
+      "Personality": 54,
+      "Luck": 62
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/85",
+    "class": {
+      "className": "Rhelan"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 100,
+      "Willpower": 100,
+      "Agility": 81,
+      "Speed": 100,
+      "Endurance": 100,
+      "Personality": 52,
+      "Luck": 52
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/86",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/87",
+    "class": {
+      "className": "Bard"
+    },
+    "attributes": {
+      "Strength": 40,
+      "Intelligence": 45,
+      "Willpower": 35,
+      "Agility": 49,
+      "Speed": 64,
+      "Endurance": 40,
+      "Personality": 65,
+      "Luck": 60
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/89",
+    "class": {
+      "className": "Thief"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/91",
+    "class": {
+      "className": "Bard"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/93",
+    "class": {
+      "className": "Spellsword"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/94",
+    "class": {
+      "className": "Ranger"
+    },
+    "attributes": {
+      "Strength": 110,
+      "Intelligence": 100,
+      "Willpower": 100,
+      "Agility": 100,
+      "Speed": 110,
+      "Endurance": 100,
+      "Personality": 100,
+      "Luck": 79
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/95",
+    "class": {
+      "className": "Nightwatch"
+    },
+    "attributes": {
+      "Strength": 63,
+      "Intelligence": 80,
+      "Willpower": 60,
+      "Agility": 64,
+      "Speed": 73,
+      "Endurance": 96,
+      "Personality": 45,
+      "Luck": 51
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/97",
+    "class": {
+      "className": "Night ranger"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/98",
+    "class": {
+      "className": "Adventurer"
+    },
+    "attributes": {
+      "Strength": 45,
+      "Intelligence": 64,
+      "Willpower": 55,
+      "Agility": 40,
+      "Speed": 46,
+      "Endurance": 32,
+      "Personality": 40,
+      "Luck": 56
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/99",
+    "class": {
+      "className": "Dark knight"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/102",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/103",
+    "class": {
+      "className": "danny class"
+    },
+    "attributes": {
+      "Strength": 108,
+      "Intelligence": 96,
+      "Willpower": 96,
+      "Agility": 77,
+      "Speed": 93,
+      "Endurance": 88,
+      "Personality": 91,
+      "Luck": 71
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/104",
+    "class": {
+      "className": "darke"
+    },
+    "attributes": {
+      "Strength": 59,
+      "Intelligence": 96,
+      "Willpower": 67,
+      "Agility": 67,
+      "Speed": 63,
+      "Endurance": 53,
+      "Personality": 84,
+      "Luck": 56
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/106",
+    "class": {
+      "className": "Agent"
+    },
+    "attributes": {
+      "Strength": 105,
+      "Intelligence": 48,
+      "Willpower": 54,
+      "Agility": 61,
+      "Speed": 105,
+      "Endurance": 85,
+      "Personality": 49,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/107",
+    "class": {
+      "className": "Assassin"
+    },
+    "attributes": {
+      "Strength": 115,
+      "Intelligence": 100,
+      "Willpower": 100,
+      "Agility": 100,
+      "Speed": 110,
+      "Endurance": 100,
+      "Personality": 77,
+      "Luck": 67
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/108",
+    "class": {
+      "className": "Paladin"
+    },
+    "attributes": {
+      "Strength": 63,
+      "Intelligence": 36,
+      "Willpower": 35,
+      "Agility": 39,
+      "Speed": 40,
+      "Endurance": 61,
+      "Personality": 30,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/109",
+    "class": {
+      "className": "Paladin"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/111",
+    "class": {
+      "className": "Nightmage"
+    },
+    "attributes": {
+      "Strength": 117,
+      "Intelligence": 117,
+      "Willpower": 110,
+      "Agility": 127,
+      "Speed": 125,
+      "Endurance": 120,
+      "Personality": 98,
+      "Luck": 102
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/112",
+    "class": {
+      "className": "Demonhunter"
+    },
+    "attributes": {
+      "Strength": 70,
+      "Intelligence": 60,
+      "Willpower": 45,
+      "Agility": 40,
+      "Speed": 50,
+      "Endurance": 80,
+      "Personality": 30,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/113",
+    "class": {
+      "className": "War Wizard"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 100,
+      "Willpower": 100,
+      "Agility": 100,
+      "Speed": 100,
+      "Endurance": 100,
+      "Personality": 85,
+      "Luck": 66
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/114",
+    "class": {
+      "className": "Warrior"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/115",
+    "class": {
+      "className": "ArcKnight"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/117",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 59,
+      "Intelligence": 66,
+      "Willpower": 56,
+      "Agility": 47,
+      "Speed": 43,
+      "Endurance": 52,
+      "Personality": 56,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/132",
+    "class": {
+      "className": "Custom class"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/133",
+    "class": {
+      "className": "Knight"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/136",
+    "class": {
+      "className": "Barbarian"
+    },
+    "attributes": {
+      "Strength": 75,
+      "Intelligence": 75,
+      "Willpower": 85,
+      "Agility": 100,
+      "Speed": 100,
+      "Endurance": 85,
+      "Personality": 50,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/137",
+    "class": {
+      "className": "Dark Knight"
+    },
+    "attributes": {
+      "Strength": 122,
+      "Intelligence": 93,
+      "Willpower": 83,
+      "Agility": 123,
+      "Speed": 75,
+      "Endurance": 128,
+      "Personality": 78,
+      "Luck": 87
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/138",
+    "class": {
+      "className": "Adventurer"
+    },
+    "attributes": {
+      "Strength": 74,
+      "Intelligence": 45,
+      "Willpower": 34,
+      "Agility": 40,
+      "Speed": 50,
+      "Endurance": 95,
+      "Personality": 30,
+      "Luck": 57
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/139",
+    "class": {
+      "className": "Knight"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/140",
+    "class": {
+      "className": "Wizardure"
+    },
+    "attributes": {
+      "Strength": 40,
+      "Intelligence": 60,
+      "Willpower": 55,
+      "Agility": 40,
+      "Speed": 40,
+      "Endurance": 30,
+      "Personality": 40,
+      "Luck": 40
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/141",
+    "class": {
+      "className": "Money Maker"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/143",
+    "class": {
+      "className": "Ranger"
+    },
+    "attributes": {
+      "Strength": 99,
+      "Intelligence": 72,
+      "Willpower": 43,
+      "Agility": 94,
+      "Speed": 98,
+      "Endurance": 67,
+      "Personality": 63,
+      "Luck": 58
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/146",
+    "class": {
+      "className": "Nightblade"
+    },
+    "attributes": {
+      "Strength": 92,
+      "Intelligence": 85,
+      "Willpower": 83,
+      "Agility": 100,
+      "Speed": 82,
+      "Endurance": 100,
+      "Personality": 72,
+      "Luck": 70
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/147",
+    "class": {
+      "className": "Librarian"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/148",
+    "class": {
+      "className": "Scout"
+    },
+    "attributes": {
+      "Strength": 82,
+      "Intelligence": 76,
+      "Willpower": 58,
+      "Agility": 60,
+      "Speed": 78,
+      "Endurance": 70,
+      "Personality": 52,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/149",
+    "class": {
+      "className": "Crusader"
+    },
+    "attributes": {
+      "Strength": 102,
+      "Intelligence": 112,
+      "Willpower": 95,
+      "Agility": 83,
+      "Speed": 80,
+      "Endurance": 86,
+      "Personality": 69,
+      "Luck": 56
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/150",
+    "class": {
+      "className": "Knight"
+    },
+    "attributes": {
+      "Strength": 100,
+      "Intelligence": 56,
+      "Willpower": 47,
+      "Agility": 52,
+      "Speed": 62,
+      "Endurance": 100,
+      "Personality": 50,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/153",
+    "class": {
+      "className": "Hyacinth"
+    },
+    "attributes": {
+      "Strength": 89,
+      "Intelligence": 42,
+      "Willpower": 37,
+      "Agility": 94,
+      "Speed": 106,
+      "Endurance": 42,
+      "Personality": 44,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/154",
+    "class": {
+      "className": "Knight"
+    },
+    "attributes": {
+      "Strength": 93,
+      "Intelligence": 60,
+      "Willpower": 42,
+      "Agility": 90,
+      "Speed": 90,
+      "Endurance": 100,
+      "Personality": 50,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/155",
+    "class": {
+      "className": "Razor Talon"
+    },
+    "attributes": {
+      "Strength": 223,
+      "Intelligence": 188,
+      "Willpower": 183,
+      "Agility": 174,
+      "Speed": 156,
+      "Endurance": 128,
+      "Personality": 33,
+      "Luck": 92
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/156",
+    "class": {
+      "className": "Adventurer"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/158",
+    "class": {
+      "className": "Mage"
+    },
+    "attributes": {
+      "Strength": 30,
+      "Intelligence": 100,
+      "Willpower": 100,
+      "Agility": 50,
+      "Speed": 50,
+      "Endurance": 42,
+      "Personality": 57,
+      "Luck": 50
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/159",
+    "class": {
+      "className": "Explorer"
+    },
+    "attributes": {
+      "Strength": 92,
+      "Intelligence": 89,
+      "Willpower": 98,
+      "Agility": 100,
+      "Speed": 100,
+      "Endurance": 98,
+      "Personality": 99,
+      "Luck": 61
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/160",
+    "class": {
+      "className": "Mystic Monk"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  },
+  {
+    "url": "https://www.elderstats.com/character/161",
+    "class": {
+      "className": "Lonely Knight"
+    },
+    "attributes": {
+      "Strength": 0,
+      "Intelligence": 0,
+      "Willpower": 0,
+      "Agility": 0,
+      "Speed": 0,
+      "Endurance": 0,
+      "Personality": 0,
+      "Luck": 0
+    }
+  }
+]
