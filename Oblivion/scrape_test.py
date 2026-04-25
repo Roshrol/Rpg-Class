@@ -38,7 +38,7 @@ def parse_attributes(text):
                 if value != 0 and value != 255:
                     stats[lines[i]] = value
             except:
-                pass
+                continue
 
     return stats
 
@@ -55,17 +55,36 @@ def scrape_character(page, url):
     
     attributes_text = page.inner_text("#profile_body")
 
-    return {
-        "url": url,
-        "class": parse_class(overview_text),
-        "attributes": parse_attributes(attributes_text)
-    }
+    required_Keys = {
+    "Strength", "Intelligence", "Willpower",
+    "Agility", "Speed", "Endurance",
+    "Personality", "Luck"
+}
+
+    character = {
+    "url": url,
+    "class": parse_class(overview_text),
+    "attributes": parse_attributes(attributes_text)
+}
+
+    if not character["class"]:
+        return None
+
+    attributes = character["attributes"]
+
+    if not attributes:
+        return None
+
+    if not required_Keys.issubset(attributes.keys()):
+        return None
+
+    return character
 
 # Get character links
 def get_character_urls(page, limit=200):
     urls = []
 
-    for page_num in range(1, 7):  
+    for page_num in range(1, 30):  
         url = f"https://www.elderstats.com/stats/db/oblivion?page={page_num}"
         print("Visiting", url)
 
@@ -81,7 +100,7 @@ def get_character_urls(page, limit=200):
                 if full not in urls:
                     urls.append(full)
 
-    return urls[:limit]
+    return urls
 
 def main():
     results = []
@@ -92,15 +111,20 @@ def main():
         page = context.new_page()
 
         print("Collecting character URLs...")
-        urls = get_character_urls(page, limit=200)
+        urls = get_character_urls(page)
         print(f"Found {len(urls)} characters")
 
-        for i, url in enumerate(urls):
+        for url in urls:
             try:
-                print(f"[{i+1}/{len(urls)}] Scraping {url}")
+                print(f"Scraping {url}")
 
                 data = scrape_character(page, url)
+                if data == None:
+                    continue
+
                 results.append(data)
+                if len(results) >= 200:
+                    break
 
                 time.sleep(2)  
 
@@ -113,7 +137,6 @@ def main():
     with open("oblivion_characters.csv", "w", newline="") as f:
         writer = csv.writer(f)
 
-    # header
         writer.writerow([
         "url", "class",
         "Strength", "Intelligence", "Willpower",
@@ -125,9 +148,7 @@ def main():
         for r in results:
             if not r:
                 continue
-
             attrs = r["attributes"]
-
             writer.writerow([
                 r["url"],
                 r["class"].get("className", ""),
