@@ -10,12 +10,15 @@ BASE = "https://www.elderstats.com"
 # Parse attributes from text
 
 def parse_class(text): 
+    allowed_Classes = {"Acrobat", "Agent", "Archer", "Assassin", "Barbarian", "Bard", "Battlemage", "Crusader", "Healer", "Knight", "Mage", "Monk", "Nightblade", "Pilgrim", "Rogue", "Scout", "Sorcerer", "Spellsword", "Thief", "Warrior", "Witchhunter"}
     classes = {}
-    key = ["class"]
     lines = [l.strip() for l in text.split("\n") if l.strip()]
+
     for i in range(len(lines) - 1):
-        if lines[i].lower() == "class": 
-             classes["className"] = lines[i + 1] 
+        if lines[i].lower() == "class":
+            next_val = lines[i + 1]
+            if next_val in allowed_Classes:
+                classes["className"] = next_val
 
     return classes
 
@@ -28,10 +31,12 @@ def parse_attributes(text):
             "Agility", "Speed", "Endurance",
             "Personality", "Luck"]
 
-    for i in range(len(lines)):
+    for i in range(len(lines) - 1):
         if lines[i] in keys:
             try:
-                stats[lines[i]] = int(lines[i + 1])
+                value = int(lines[i + 1])
+                if value != 0 and value != 255:
+                    stats[lines[i]] = value
             except:
                 pass
 
@@ -57,10 +62,10 @@ def scrape_character(page, url):
     }
 
 # Get character links
-def get_character_urls(page, limit=100):
+def get_character_urls(page, limit=200):
     urls = []
 
-    for page_num in range(1, 4):  
+    for page_num in range(1, 7):  
         url = f"https://www.elderstats.com/stats/db/oblivion?page={page_num}"
         print("Visiting", url)
 
@@ -87,7 +92,7 @@ def main():
         page = context.new_page()
 
         print("Collecting character URLs...")
-        urls = get_character_urls(page, limit=100)
+        urls = get_character_urls(page, limit=200)
         print(f"Found {len(urls)} characters")
 
         for i, url in enumerate(urls):
