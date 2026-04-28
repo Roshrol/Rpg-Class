@@ -10,7 +10,10 @@ BASE = "https://www.elderstats.com"
 # Parse attributes from text
 
 def parse_class(text): 
-    allowed_Classes = {"Acrobat", "Agent", "Archer", "Assassin", "Barbarian", "Bard", "Battlemage", "Crusader", "Healer", "Knight", "Mage", "Monk", "Nightblade", "Pilgrim", "Rogue", "Scout", "Sorcerer", "Spellsword", "Thief", "Warrior", "Witchhunter"}
+    allowed_Classes = {"Acrobat", "Agent", "Archer", "Assassin", 
+    "Barbarian", "Bard", "Battlemage", "Crusader", "Healer", "Knight", "Mage", "Monk", 
+    "Nightblade", "Pilgrim", "Rogue", "Scout", "Sorcerer", "Spellsword", "Thief", "Warrior", "Witchhunter"}
+
     classes = {}
     lines = [l.strip() for l in text.split("\n") if l.strip()]
 
@@ -21,6 +24,23 @@ def parse_class(text):
                 classes["className"] = next_val
 
     return classes
+
+def parse_skills(text):
+    allowed_Skills = ["Armorer",  "Athletics", "Blade", "Block", "Blunt", "Hand to Hand", "Heavy Armor",
+    "Alchemy", "Alteration", "Conjuration", "Destruction", "Illusion", "Mysticism", 
+    "Restoration", "Acrobatics", "Light Armor", "Marksman", "Mercantile", "Security", "Sneak", "Speechcraft"]
+    skills = {}
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+
+    for i in range(len(lines) - 1):
+        if lines[i] in allowed_Skills:
+            try:
+                value = int(lines[i + 1])
+                skills[lines[i]] = value
+            except:
+                continue
+
+    return skills
 
 
 def parse_attributes(text):
@@ -54,6 +74,11 @@ def scrape_character(page, url):
     page.wait_for_timeout(500)
     
     attributes_text = page.inner_text("#profile_body")
+    
+    page.click(".obnav_skills")
+    page.wait_for_timeout(500)
+    skills_text = page.inner_text("#profile_body")
+    
 
     required_Keys = {
     "Strength", "Intelligence", "Willpower",
@@ -64,7 +89,8 @@ def scrape_character(page, url):
     character = {
     "url": url,
     "class": parse_class(overview_text),
-    "attributes": parse_attributes(attributes_text)
+    "attributes": parse_attributes(attributes_text),
+    "skills": parse_skills(skills_text)
 }
 
     if not character["class"]:
@@ -81,10 +107,10 @@ def scrape_character(page, url):
     return character
 
 # Get character links
-def get_character_urls(page, limit=200):
+def get_character_urls(page, limit=1000):
     urls = []
 
-    for page_num in range(1, 30):  
+    for page_num in range(1, 73):  
         url = f"https://www.elderstats.com/stats/db/oblivion?page={page_num}"
         print("Visiting", url)
 
@@ -123,7 +149,7 @@ def main():
                     continue
 
                 results.append(data)
-                if len(results) >= 200:
+                if len(results) >= 1000:
                     break
 
                 time.sleep(2)  
@@ -134,33 +160,35 @@ def main():
         browser.close()
 
     # save output
-    with open("oblivion_characters.csv", "w", newline="") as f:
-        writer = csv.writer(f)
+        with open("oblivion_characters.csv", "w", newline="") as f:
+            writer = csv.writer(f)
 
-        writer.writerow([
-        "url", "class",
-        "Strength", "Intelligence", "Willpower",
-        "Agility", "Speed", "Endurance",
-        "Personality", "Luck"
-    ])
+            skill_columns = [
+                "Armorer", "Athletics", "Blade", "Block", "Blunt",
+                "Hand to Hand", "Heavy Armor", "Alchemy", "Alteration",
+                "Conjuration", "Destruction", "Illusion", "Mysticism",
+                "Restoration", "Acrobatics", "Light Armor", "Marksman",
+                "Mercantile", "Security", "Sneak", "Speechcraft"
+            ]
 
-    
-        for r in results:
-            if not r:
-                continue
-            attrs = r["attributes"]
-            writer.writerow([
-                r["url"],
-                r["class"].get("className", ""),
-                attrs.get("Strength", ""),
-                attrs.get("Intelligence", ""),
-                attrs.get("Willpower", ""),
-                attrs.get("Agility", ""),
-                attrs.get("Speed", ""),
-                attrs.get("Endurance", ""),
-                attrs.get("Personality", ""),
-                attrs.get("Luck", "")
-        ])
+            attribute_columns = [            
+                "Strength", "Intelligence", "Willpower",
+                "Agility", "Speed", "Endurance",
+                "Personality", "Luck"
+            ]
+
+            writer.writerow(["url", "class"] + skill_columns + attribute_columns)
+
+            for r in results:
+                if not r:
+                    continue
+
+                attrs = r["attributes"]
+                skills = r["skills"]
+
+                writer.writerow([r["url"], r["class"].get("className", "")] + 
+                [skills.get(skill, "") for skill in skill_columns] + 
+                [attrs.get("Strength", "") for attr in  attribute_columns])
 
 if __name__ == "__main__":
     main()
