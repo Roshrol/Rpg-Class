@@ -1,596 +1,155 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "machine_shape": "hm",
-      "gpuType": "T4",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    },
-    "accelerator": "GPU"
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/Roshrol/Rpg-Class/blob/main/Final_Project.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": null,
-      "metadata": {
-        "id": "IBAYLzsGBuI6",
-        "collapsed": true,
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 290
-        },
-        "outputId": "78f876a4-c2c8-41f2-bc71-2cca7c529e19"
-      },
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": [
-              "                                       url       class  Armorer  Athletics  \\\n",
-              "0   https://www.elderstats.com/character/8       Thief      100         84   \n",
-              "1  https://www.elderstats.com/character/22     Warrior       77         43   \n",
-              "2  https://www.elderstats.com/character/31       Rogue       34          0   \n",
-              "3  https://www.elderstats.com/character/38  Battlemage       22         40   \n",
-              "4  https://www.elderstats.com/character/39     Warrior        0          0   \n",
-              "\n",
-              "   Blade  Block  Blunt  Hand to Hand  Heavy Armor  Alchemy  ...  Sneak  \\\n",
-              "0    102     50     25            53          100       20  ...    102   \n",
-              "1     59     48     32            35          100      100  ...     14   \n",
-              "2     30     29      0             0            0        0  ...     54   \n",
-              "3    100     19     16             5            9       41  ...     89   \n",
-              "4    100      0      0             0            0        0  ...      0   \n",
-              "\n",
-              "   Speechcraft  Strength  Intelligence  Willpower  Agility  Speed  Endurance  \\\n",
-              "0           80       100           100        100      100    100        100   \n",
-              "1           19       100           100        100      100    100        100   \n",
-              "2            0        56            56         56       56     56         56   \n",
-              "3           11       102           102        102      102    102        102   \n",
-              "4            0       100           100        100      100    100        100   \n",
-              "\n",
-              "   Personality  Luck  \n",
-              "0          100   100  \n",
-              "1          100   100  \n",
-              "2           56    56  \n",
-              "3          102   102  \n",
-              "4          100   100  \n",
-              "\n",
-              "[5 rows x 31 columns]"
-            ],
-            "text/html": [
-              "\n",
-              "  <div id=\"df-e10b2d3a-3978-48c2-ac17-3569baab300c\" class=\"colab-df-container\">\n",
-              "    <div>\n",
-              "<style scoped>\n",
-              "    .dataframe tbody tr th:only-of-type {\n",
-              "        vertical-align: middle;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe tbody tr th {\n",
-              "        vertical-align: top;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe thead th {\n",
-              "        text-align: right;\n",
-              "    }\n",
-              "</style>\n",
-              "<table border=\"1\" class=\"dataframe\">\n",
-              "  <thead>\n",
-              "    <tr style=\"text-align: right;\">\n",
-              "      <th></th>\n",
-              "      <th>url</th>\n",
-              "      <th>class</th>\n",
-              "      <th>Armorer</th>\n",
-              "      <th>Athletics</th>\n",
-              "      <th>Blade</th>\n",
-              "      <th>Block</th>\n",
-              "      <th>Blunt</th>\n",
-              "      <th>Hand to Hand</th>\n",
-              "      <th>Heavy Armor</th>\n",
-              "      <th>Alchemy</th>\n",
-              "      <th>...</th>\n",
-              "      <th>Sneak</th>\n",
-              "      <th>Speechcraft</th>\n",
-              "      <th>Strength</th>\n",
-              "      <th>Intelligence</th>\n",
-              "      <th>Willpower</th>\n",
-              "      <th>Agility</th>\n",
-              "      <th>Speed</th>\n",
-              "      <th>Endurance</th>\n",
-              "      <th>Personality</th>\n",
-              "      <th>Luck</th>\n",
-              "    </tr>\n",
-              "  </thead>\n",
-              "  <tbody>\n",
-              "    <tr>\n",
-              "      <th>0</th>\n",
-              "      <td>https://www.elderstats.com/character/8</td>\n",
-              "      <td>Thief</td>\n",
-              "      <td>100</td>\n",
-              "      <td>84</td>\n",
-              "      <td>102</td>\n",
-              "      <td>50</td>\n",
-              "      <td>25</td>\n",
-              "      <td>53</td>\n",
-              "      <td>100</td>\n",
-              "      <td>20</td>\n",
-              "      <td>...</td>\n",
-              "      <td>102</td>\n",
-              "      <td>80</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>1</th>\n",
-              "      <td>https://www.elderstats.com/character/22</td>\n",
-              "      <td>Warrior</td>\n",
-              "      <td>77</td>\n",
-              "      <td>43</td>\n",
-              "      <td>59</td>\n",
-              "      <td>48</td>\n",
-              "      <td>32</td>\n",
-              "      <td>35</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>...</td>\n",
-              "      <td>14</td>\n",
-              "      <td>19</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>2</th>\n",
-              "      <td>https://www.elderstats.com/character/31</td>\n",
-              "      <td>Rogue</td>\n",
-              "      <td>34</td>\n",
-              "      <td>0</td>\n",
-              "      <td>30</td>\n",
-              "      <td>29</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>...</td>\n",
-              "      <td>54</td>\n",
-              "      <td>0</td>\n",
-              "      <td>56</td>\n",
-              "      <td>56</td>\n",
-              "      <td>56</td>\n",
-              "      <td>56</td>\n",
-              "      <td>56</td>\n",
-              "      <td>56</td>\n",
-              "      <td>56</td>\n",
-              "      <td>56</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>3</th>\n",
-              "      <td>https://www.elderstats.com/character/38</td>\n",
-              "      <td>Battlemage</td>\n",
-              "      <td>22</td>\n",
-              "      <td>40</td>\n",
-              "      <td>100</td>\n",
-              "      <td>19</td>\n",
-              "      <td>16</td>\n",
-              "      <td>5</td>\n",
-              "      <td>9</td>\n",
-              "      <td>41</td>\n",
-              "      <td>...</td>\n",
-              "      <td>89</td>\n",
-              "      <td>11</td>\n",
-              "      <td>102</td>\n",
-              "      <td>102</td>\n",
-              "      <td>102</td>\n",
-              "      <td>102</td>\n",
-              "      <td>102</td>\n",
-              "      <td>102</td>\n",
-              "      <td>102</td>\n",
-              "      <td>102</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>4</th>\n",
-              "      <td>https://www.elderstats.com/character/39</td>\n",
-              "      <td>Warrior</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>100</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>...</td>\n",
-              "      <td>0</td>\n",
-              "      <td>0</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "      <td>100</td>\n",
-              "    </tr>\n",
-              "  </tbody>\n",
-              "</table>\n",
-              "<p>5 rows × 31 columns</p>\n",
-              "</div>\n",
-              "    <div class=\"colab-df-buttons\">\n",
-              "\n",
-              "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-e10b2d3a-3978-48c2-ac17-3569baab300c')\"\n",
-              "            title=\"Convert this dataframe to an interactive table.\"\n",
-              "            style=\"display:none;\">\n",
-              "\n",
-              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
-              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
-              "  </svg>\n",
-              "    </button>\n",
-              "\n",
-              "  <style>\n",
-              "    .colab-df-container {\n",
-              "      display:flex;\n",
-              "      gap: 12px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert {\n",
-              "      background-color: #E8F0FE;\n",
-              "      border: none;\n",
-              "      border-radius: 50%;\n",
-              "      cursor: pointer;\n",
-              "      display: none;\n",
-              "      fill: #1967D2;\n",
-              "      height: 32px;\n",
-              "      padding: 0 0 0 0;\n",
-              "      width: 32px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert:hover {\n",
-              "      background-color: #E2EBFA;\n",
-              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "      fill: #174EA6;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-buttons div {\n",
-              "      margin-bottom: 4px;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert {\n",
-              "      background-color: #3B4455;\n",
-              "      fill: #D2E3FC;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert:hover {\n",
-              "      background-color: #434B5C;\n",
-              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
-              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
-              "      fill: #FFFFFF;\n",
-              "    }\n",
-              "  </style>\n",
-              "\n",
-              "    <script>\n",
-              "      const buttonEl =\n",
-              "        document.querySelector('#df-e10b2d3a-3978-48c2-ac17-3569baab300c button.colab-df-convert');\n",
-              "      buttonEl.style.display =\n",
-              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "\n",
-              "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-e10b2d3a-3978-48c2-ac17-3569baab300c');\n",
-              "        const dataTable =\n",
-              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
-              "                                                    [key], {});\n",
-              "        if (!dataTable) return;\n",
-              "\n",
-              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
-              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
-              "          + ' to learn more about interactive tables.';\n",
-              "        element.innerHTML = '';\n",
-              "        dataTable['output_type'] = 'display_data';\n",
-              "        await google.colab.output.renderOutput(dataTable, element);\n",
-              "        const docLink = document.createElement('div');\n",
-              "        docLink.innerHTML = docLinkHtml;\n",
-              "        element.appendChild(docLink);\n",
-              "      }\n",
-              "    </script>\n",
-              "  </div>\n",
-              "\n",
-              "\n",
-              "    </div>\n",
-              "  </div>\n"
-            ],
-            "application/vnd.google.colaboratory.intrinsic+json": {
-              "type": "dataframe",
-              "variable_name": "train"
-            }
-          },
-          "metadata": {},
-          "execution_count": 3
-        }
-      ],
-      "source": [
-        "import pandas as pd\n",
-        "url = \"https://raw.githubusercontent.com/Roshrol/Rpg-Class/refs/heads/main/data/oblivion_characters.csv\" #our playwrite info should go here I believe\n",
-        "train = pd.read_csv(url)\n",
-        "train.head()\n"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "import torch\n",
-        "import pandas as pd\n",
-        "import pickle\n",
-        "import numpy as np\n",
-        "\n",
-        "class DataPrepPipeline:\n",
-        "  #before training we prepared the data\n",
-        "  def __init__(self):\n",
-        "\n",
-        "    self.feature_cols = [\"Strength\", \"Intelligence\", \"Willpower\", \"Agility\", \"Speed\",\n",
-        "                         \"Endurance\", \"Personality\", \"Luck\",\n",
-        "                         \"Armorer\",  \"Athletics\", \"Blade\", \"Block\", \"Blunt\", \"Hand to Hand\", \"Heavy Armor\",\n",
-        "                         \"Alchemy\", \"Alteration\", \"Conjuration\", \"Destruction\", \"Illusion\", \"Mysticism\",\n",
-        "                         \"Restoration\", \"Acrobatics\", \"Light Armor\", \"Marksman\", \"Mercantile\", \"Security\",\n",
-        "                         \"Sneak\", \"Speechcraft\"]\n",
-        "    #standard deviation and average used for normalization\n",
-        "    self.mean = None\n",
-        "    self.std = None\n",
-        "\n",
-        "    #converting class names to numbers using a dictionary\n",
-        "    self.class_type = {}\n",
-        "\n",
-        "  #learning stats from our training data\n",
-        "  def fit(self, X_df, y_df):\n",
-        "    self.mean = X_df[self.feature_cols].mean()\n",
-        "    self.std = X_df[self.feature_cols].std()\n",
-        "\n",
-        "    classes = y_df.unique()\n",
-        "    for i, c in enumerate(classes):\n",
-        "        self.class_type[c] = i\n",
-        "\n",
-        "  #normalizing our features and converting to a pytorch tensor\n",
-        "  def transform(self, X_df):\n",
-        "    X = (X_df[self.feature_cols] - self.mean) / (self.std + 1e-8)\n",
-        "    return torch.tensor(X.values, dtype=torch.float32)\n",
-        "\n",
-        "  #coverting the class labels to int labels\n",
-        "  def transform_labels(self, y_df):\n",
-        "    y = [self.class_type[c] for c in y_df]\n",
-        "    return torch.tensor(y, dtype=torch.long) # made it long instead of a float\n",
-        "\n",
-        "#our multiclass cross entropy loss function\n",
-        "def cross_entropy_loss(q, y):\n",
-        "  return torch.nn.functional.cross_entropy(q, y)\n",
-        "\n",
-        "#multiclass logistic regression\n",
-        "class RPG_Model:\n",
-        "    def __init__(self, input_dim, num_classes):\n",
-        "      #our weights should be features x classes I think\n",
-        "      self.W = torch.randn(input_dim, num_classes, requires_grad=True) #grad as in will need to be applied to the gradient\n",
-        "      self.b = torch.zeros(num_classes, requires_grad=True)\n",
-        "\n",
-        "    def forward(self, X):\n",
-        "      return X @ self.W + self.b\n",
-        "\n",
-        "    def predict(self, X):\n",
-        "      q = self.forward(X)\n",
-        "      return torch.argmax(q, dim=1)\n",
-        "\n",
-        "\n",
-        "class GradientDescentOptimizer:\n",
-        "    def __init__(self, model, lr = 0.01):\n",
-        "        self.model = model\n",
-        "        self.lr = lr\n",
-        "\n",
-        "    def step(self):\n",
-        "        self.model.W.data -= self.lr * self.model.W.grad\n",
-        "        self.model.b.data -= self.lr * self.model.b.grad\n",
-        "\n",
-        "        self.model.W.grad.zero_()\n",
-        "        self.model.b.grad.zero_()\n",
-        "\n",
-        "#mesures prediction accuracy\n",
-        "def accuracy(model, X, y):\n",
-        "  pred = model.predict(X)\n",
-        "  return (pred == y).float().mean()\n",
-        "\n",
-        "#Main function goes below\n",
-        "if __name__ == \"__main__\":\n",
-        "    # Load the data\n",
-        "    url = \"https://raw.githubusercontent.com/Roshrol/Rpg-Class/refs/heads/main/data/oblivion_characters.csv\"\n",
-        "    train = pd.read_csv(url)\n",
-        "\n",
-        "    # remove broken rows\n",
-        "    train = train.dropna()\n",
-        "\n",
-        "    # remove scraped values\n",
-        "    train = train[\n",
-        "        (train.select_dtypes(include=[np.number]) < 300).all(axis=1)\n",
-        "    ]\n",
-        "\n",
-        "    # remove rows where all skills are 0\n",
-        "    skill_cols = [\n",
-        "        \"Armorer\", \"Athletics\", \"Blade\", \"Block\", \"Blunt\",\n",
-        "        \"Hand to Hand\", \"Heavy Armor\", \"Alchemy\", \"Alteration\",\n",
-        "        \"Conjuration\", \"Destruction\", \"Illusion\", \"Mysticism\",\n",
-        "        \"Restoration\", \"Acrobatics\", \"Light Armor\", \"Marksman\",\n",
-        "        \"Mercantile\", \"Security\", \"Sneak\", \"Speechcraft\"\n",
-        "    ]\n",
-        "\n",
-        "    train = train[(train[skill_cols].sum(axis=1) > 0)]\n",
-        "    # Randomly sample 80% of the rows to be the training set\n",
-        "    train_ix = train.sample(frac=0.8, random_state=42).index\n",
-        "    test_ix = train.drop(train_ix).index\n",
-        "\n",
-        "    # separate the features and targets\n",
-        "    X_df = train.drop(columns=[\"class\", \"url\"])\n",
-        "    y_df = train[\"class\"]\n",
-        "\n",
-        "    # fit and save the data prep pipeline\n",
-        "    pipeline = DataPrepPipeline()\n",
-        "    pipeline.fit(X_df.loc[train_ix], y_df.loc[train_ix])\n",
-        "\n",
-        "    X_train = pipeline.transform(X_df.loc[train_ix])\n",
-        "    y_train = pipeline.transform_labels(y_df.loc[train_ix])\n",
-        "\n",
-        "    # Transform test features using the same stat from training set\n",
-        "    X_test = pipeline.transform(X_df.loc[test_ix])\n",
-        "    y_test = pipeline.transform_labels(y_df.loc[test_ix])\n",
-        "\n",
-        "    num_classes = len(set(y_df))\n",
-        "    model = RPG_Model(X_train.shape[1], num_classes)\n",
-        "    opt = GradientDescentOptimizer(model, lr=0.01)\n",
-        "\n",
-        "    losses = []\n",
-        "\n",
-        "    #training loop\n",
-        "    for epoch in range(70000):\n",
-        "        q = model.forward(X_train)\n",
-        "        loss = cross_entropy_loss(q, y_train)\n",
-        "\n",
-        "        loss.backward()\n",
-        "        opt.step()\n",
-        "\n",
-        "        losses.append(loss.item())\n",
-        "\n",
-        "        if epoch % 1000 == 0:\n",
-        "            print(f\"Epoch {epoch}, Loss: {loss.item()}\")\n",
-        "\n",
-        "    # save the model\n",
-        "    with open(\"model.pkl\", \"wb\") as f:\n",
-        "        pickle.dump(model, f)\n",
-        "\n",
-        "    q = model.forward(X_train)\n",
-        "    final = cross_entropy_loss(q, y_train).item()\n",
-        "\n",
-        "    #training accuracy\n",
-        "    acc = accuracy(model, X_train, y_train).item()\n",
-        "\n",
-        "    #test accuracy\n",
-        "    test_acc  = accuracy(model, X_test,  y_test).item()\n",
-        "\n",
-        "    print(\"Train loss:\", final)\n",
-        "    print(\"Train accuracy:\", acc)\n",
-        "    print(\"Test accuracy: \", test_acc)\n"
-      ],
-      "metadata": {
-        "id": "XuAdT-6pFfGX",
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "outputId": "735fed8d-2345-45c5-9f3b-fe5f7ca97cf7"
-      },
-      "execution_count": null,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Epoch 0, Loss: 9.620304107666016\n",
-            "Epoch 1000, Loss: 3.685065746307373\n",
-            "Epoch 2000, Loss: 2.8279201984405518\n",
-            "Epoch 3000, Loss: 2.3413848876953125\n",
-            "Epoch 4000, Loss: 1.9920692443847656\n",
-            "Epoch 5000, Loss: 1.7241206169128418\n",
-            "Epoch 6000, Loss: 1.5099356174468994\n",
-            "Epoch 7000, Loss: 1.3371436595916748\n",
-            "Epoch 8000, Loss: 1.199967861175537\n",
-            "Epoch 9000, Loss: 1.0901433229446411\n",
-            "Epoch 10000, Loss: 1.0015658140182495\n",
-            "Epoch 11000, Loss: 0.9289935827255249\n",
-            "Epoch 12000, Loss: 0.8683996200561523\n",
-            "Epoch 13000, Loss: 0.8170483708381653\n",
-            "Epoch 14000, Loss: 0.7730340361595154\n",
-            "Epoch 15000, Loss: 0.7349732518196106\n",
-            "Epoch 16000, Loss: 0.7017817497253418\n",
-            "Epoch 17000, Loss: 0.672569990158081\n",
-            "Epoch 18000, Loss: 0.6466207504272461\n",
-            "Epoch 19000, Loss: 0.6233631372451782\n",
-            "Epoch 20000, Loss: 0.602344810962677\n",
-            "Epoch 21000, Loss: 0.5832071304321289\n",
-            "Epoch 22000, Loss: 0.5656658411026001\n",
-            "Epoch 23000, Loss: 0.5494946837425232\n",
-            "Epoch 24000, Loss: 0.5345123410224915\n",
-            "Epoch 25000, Loss: 0.5205708146095276\n",
-            "Epoch 26000, Loss: 0.5075488686561584\n",
-            "Epoch 27000, Loss: 0.49534448981285095\n",
-            "Epoch 28000, Loss: 0.4838719367980957\n",
-            "Epoch 29000, Loss: 0.47305771708488464\n",
-            "Epoch 30000, Loss: 0.46283888816833496\n",
-            "Epoch 31000, Loss: 0.4531609117984772\n",
-            "Epoch 32000, Loss: 0.4439767897129059\n",
-            "Epoch 33000, Loss: 0.4352450966835022\n",
-            "Epoch 34000, Loss: 0.42692944407463074\n",
-            "Epoch 35000, Loss: 0.4189971685409546\n",
-            "Epoch 36000, Loss: 0.41142067313194275\n",
-            "Epoch 37000, Loss: 0.4041735529899597\n",
-            "Epoch 38000, Loss: 0.39723333716392517\n",
-            "Epoch 39000, Loss: 0.39057931303977966\n",
-            "Epoch 40000, Loss: 0.3841928541660309\n",
-            "Epoch 41000, Loss: 0.378057062625885\n",
-            "Epoch 42000, Loss: 0.3721564710140228\n",
-            "Epoch 43000, Loss: 0.36647695302963257\n",
-            "Epoch 44000, Loss: 0.3610052764415741\n",
-            "Epoch 45000, Loss: 0.3557300567626953\n",
-            "Epoch 46000, Loss: 0.35063987970352173\n",
-            "Epoch 47000, Loss: 0.3457247316837311\n",
-            "Epoch 48000, Loss: 0.34097546339035034\n",
-            "Epoch 49000, Loss: 0.33638283610343933\n",
-            "Epoch 50000, Loss: 0.33193913102149963\n",
-            "Epoch 51000, Loss: 0.32763728499412537\n",
-            "Epoch 52000, Loss: 0.3234696686267853\n",
-            "Epoch 53000, Loss: 0.31942999362945557\n",
-            "Epoch 54000, Loss: 0.315511554479599\n",
-            "Epoch 55000, Loss: 0.31170934438705444\n",
-            "Epoch 56000, Loss: 0.30801716446876526\n",
-            "Epoch 57000, Loss: 0.30443137884140015\n",
-            "Epoch 58000, Loss: 0.30094587802886963\n",
-            "Epoch 59000, Loss: 0.29755699634552\n",
-            "Epoch 60000, Loss: 0.2942599058151245\n",
-            "Epoch 61000, Loss: 0.2910510301589966\n",
-            "Epoch 62000, Loss: 0.2879270613193512\n",
-            "Epoch 63000, Loss: 0.28488433361053467\n",
-            "Epoch 64000, Loss: 0.2819191515445709\n",
-            "Epoch 65000, Loss: 0.27902883291244507\n",
-            "Epoch 66000, Loss: 0.27621015906333923\n",
-            "Epoch 67000, Loss: 0.2734604477882385\n",
-            "Epoch 68000, Loss: 0.2707768976688385\n",
-            "Epoch 69000, Loss: 0.26815733313560486\n",
-            "Train loss: 0.26559892296791077\n",
-            "Train accuracy: 0.9796954393386841\n",
-            "Test accuracy:  0.44897958636283875\n"
-          ]
-        }
-      ]
-    }
-  ]
-}
+import torch
+import pandas as pd
+import pickle
+import numpy as np
+
+class DataPrepPipeline:
+  #before training we prepared the data
+  def __init__(self):
+
+    self.feature_cols = ["Strength", "Intelligence", "Willpower", "Agility", "Speed",
+                         "Endurance", "Personality", "Luck",
+                         "Armorer",  "Athletics", "Blade", "Block", "Blunt", "Hand to Hand", "Heavy Armor",
+                         "Alchemy", "Alteration", "Conjuration", "Destruction", "Illusion", "Mysticism",
+                         "Restoration", "Acrobatics", "Light Armor", "Marksman", "Mercantile", "Security",
+                         "Sneak", "Speechcraft"]
+    #standard deviation and average used for normalization
+    self.mean = None
+    self.std = None
+
+    #converting class names to numbers using a dictionary
+    self.class_type = {}
+
+  #learning stats from our training data
+  def fit(self, X_df, y_df):
+    self.mean = X_df[self.feature_cols].mean()
+    self.std = X_df[self.feature_cols].std()
+
+    classes = y_df.unique()
+    for i, c in enumerate(classes):
+        self.class_type[c] = i
+
+  #normalizing our features and converting to a pytorch tensor
+  def transform(self, X_df):
+    X = (X_df[self.feature_cols] - self.mean) / (self.std + 1e-8)
+    return torch.tensor(X.values, dtype=torch.float32)
+
+  #coverting the class labels to int labels
+  def transform_labels(self, y_df):
+    y = [self.class_type[c] for c in y_df]
+    return torch.tensor(y, dtype=torch.long) # made it long instead of a float
+
+#our multiclass cross entropy loss function
+def cross_entropy_loss(q, y):
+  return torch.nn.functional.cross_entropy(q, y)
+
+#multiclass logistic regression
+class RPG_Model:
+    def __init__(self, input_dim, num_classes):
+      #our weights should be features x classes I think
+      self.W = torch.randn(input_dim, num_classes, requires_grad=True) #grad as in will need to be applied to the gradient
+      self.b = torch.zeros(num_classes, requires_grad=True)
+
+    def forward(self, X):
+      return X @ self.W + self.b
+
+    def predict(self, X):
+      q = self.forward(X)
+      return torch.argmax(q, dim=1)
+
+
+class GradientDescentOptimizer:
+    def __init__(self, model, lr = 0.01):
+        self.model = model
+        self.lr = lr
+
+    def step(self):
+        self.model.W.data -= self.lr * self.model.W.grad
+        self.model.b.data -= self.lr * self.model.b.grad
+
+        self.model.W.grad.zero_()
+        self.model.b.grad.zero_()
+
+#mesures prediction accuracy
+def accuracy(model, X, y):
+  pred = model.predict(X)
+  return (pred == y).float().mean()
+
+#Main function goes below
+if __name__ == "__main__":
+    # Load the data
+    url = "https://raw.githubusercontent.com/Roshrol/Rpg-Class/refs/heads/main/data/oblivion_characters.csv"
+    train = pd.read_csv(url)
+
+    # remove broken rows
+    train = train.dropna()
+
+    # remove scraped values
+    train = train[
+        (train.select_dtypes(include=[np.number]) < 300).all(axis=1)
+    ]
+
+    # remove rows where all skills are 0
+    skill_cols = [
+        "Armorer", "Athletics", "Blade", "Block", "Blunt",
+        "Hand to Hand", "Heavy Armor", "Alchemy", "Alteration",
+        "Conjuration", "Destruction", "Illusion", "Mysticism",
+        "Restoration", "Acrobatics", "Light Armor", "Marksman",
+        "Mercantile", "Security", "Sneak", "Speechcraft"
+    ]
+
+    train = train[(train[skill_cols].sum(axis=1) > 0)]
+    # Randomly sample 80% of the rows to be the training set
+    train_ix = train.sample(frac=0.8, random_state=42).index
+    test_ix = train.drop(train_ix).index
+
+    # separate the features and targets
+    X_df = train.drop(columns=["class", "url"])
+    y_df = train["class"]
+
+    # fit and save the data prep pipeline
+    pipeline = DataPrepPipeline()
+    pipeline.fit(X_df.loc[train_ix], y_df.loc[train_ix])
+
+    X_train = pipeline.transform(X_df.loc[train_ix])
+    y_train = pipeline.transform_labels(y_df.loc[train_ix])
+
+    # Transform test features using the same stat from training set
+    X_test = pipeline.transform(X_df.loc[test_ix])
+    y_test = pipeline.transform_labels(y_df.loc[test_ix])
+
+    num_classes = len(set(y_df))
+    model = RPG_Model(X_train.shape[1], num_classes)
+    opt = GradientDescentOptimizer(model, lr=0.01)
+
+    losses = []
+
+    #training loop
+    for epoch in range(70000):
+        q = model.forward(X_train)
+        loss = cross_entropy_loss(q, y_train)
+
+        loss.backward()
+        opt.step()
+
+        losses.append(loss.item())
+
+        if epoch % 1000 == 0:
+            print(f"Epoch {epoch}, Loss: {loss.item()}")
+
+    # save the model
+    with open("model.pkl", "wb") as f:
+        pickle.dump(model, f)
+
+    q = model.forward(X_train)
+    final = cross_entropy_loss(q, y_train).item()
+
+    #training accuracy
+    acc = accuracy(model, X_train, y_train).item()
+
+    #test accuracy
+    test_acc  = accuracy(model, X_test,  y_test).item()
+
+    print("Train loss:", final)
+    print("Train accuracy:", acc)
+    print("Test accuracy: ", test_acc)
